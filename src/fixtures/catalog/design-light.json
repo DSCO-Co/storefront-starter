@@ -1,0 +1,261 @@
+{
+  "products": [
+    {
+      "slug": "bpc-157",
+      "name": "BPC-157",
+      "tagline": "Pentadecapeptide",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "gridVariantCards": true,
+      "description": "Synthetic pentadecapeptide \u2014 a 15-amino-acid partial sequence of a human gastric protein. Lyophilized powder, independently tested.",
+      "overview": "BPC-157 is one of the most frequently requested reference peptides in the preclinical literature. Each lot is synthesized to order, lyophilized under nitrogen, and released only after third-party analytical review.\n\nSupplied in amber glass vials with crimp seals. Store lyophilized material refrigerated and protected from light.",
+      "mechanism": "In published cell-culture work, BPC-157 has been characterized for its interactions with growth-factor signaling pathways and nitric-oxide-related enzyme systems. All available data are limited to in-vitro and preclinical models.",
+      "priceCents": 5995,
+      "variants": [
+        {
+          "label": "5mg",
+          "sku": "DL-BPC-5",
+          "priceCents": 5995
+        },
+        {
+          "label": "10mg",
+          "sku": "DL-BPC-10",
+          "priceCents": 9995
+        }
+      ],
+      "specs": [
+        {
+          "label": "Purity (RP-HPLC, 220 nm)",
+          "value": "99.41%"
+        },
+        {
+          "label": "Observed mass (ESI-MS)",
+          "value": "1419.5 Da"
+        },
+        {
+          "label": "Theoretical mass",
+          "value": "1419.53 Da"
+        },
+        {
+          "label": "Counter-ion",
+          "value": "Acetate"
+        }
+      ],
+      "pairedWith": [
+        {
+          "slug": "ghk-cu",
+          "name": "GHK-Cu"
+        },
+        {
+          "slug": "kpv",
+          "name": "KPV"
+        }
+      ],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DL-LOT-0101",
+          "testDate": "2026-05-12",
+          "purityPercent": 99.41,
+          "url": "/coa/design-light-bpc-157-0101.pdf"
+        },
+        {
+          "label": "Sterility",
+          "docType": "sterility",
+          "lotNumber": "DL-LOT-0101",
+          "testDate": "2026-05-12",
+          "url": "/coa/design-light-bpc-157-0101-sterility.pdf"
+        }
+      ],
+      "images": [
+        {
+          "assetRef": "asset:design-light/73d0976f1dfdacefc16fb0cfbc8df497e03e3a65518583315520d0b3cbb99395.png",
+          "alt": "BPC-157 lyophilized vial, demo placeholder render"
+        },
+        {
+          "assetRef": "asset:design-light/c544d06a1d3a0db4a2b4173ccda5b02c7b1b79e382a8832f4999120157e0ca4d.png",
+          "alt": "BPC-157 10 mg lyophilized vial, demo placeholder render",
+          "variantRef": "DL-BPC-10"
+        }
+      ]
+    },
+    {
+      "slug": "ghk-cu",
+      "name": "GHK-Cu",
+      "tagline": "Copper tripeptide complex",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "description": "Copper tripeptide complex, lyophilized \u2014 the copper chelate gives the cake its blue color. Independently tested.",
+      "overview": "GHK-Cu is supplied as the copper(II) chelate of the tripeptide GHK. The characteristic blue lyophilizate is an identity indicator noted on each certificate.",
+      "priceCents": 6495,
+      "variants": [
+        {
+          "label": "50mg",
+          "sku": "DL-GHK-50",
+          "priceCents": 6495
+        }
+      ],
+      "pairedWith": [
+        {
+          "slug": "bpc-157",
+          "name": "BPC-157"
+        }
+      ],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DL-LOT-0102",
+          "testDate": "2026-05-20",
+          "purityPercent": 99.18,
+          "url": "/coa/design-light-ghk-cu-0102.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "tb-500",
+      "name": "TB-500",
+      "tagline": "Thymosin beta-4 fragment",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "description": "Thymosin beta-4 fragment, lyophilized. Third-party analytical testing per lot.",
+      "overview": "TB-500 is supplied as a lyophilized reference material for in-vitro research. Each batch is released with its analytical documentation attached.",
+      "priceCents": 8995,
+      "variants": [
+        {
+          "label": "10mg",
+          "sku": "DL-TB-10",
+          "priceCents": 8995
+        }
+      ],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DL-LOT-0103",
+          "testDate": "2026-06-03",
+          "purityPercent": 99.02,
+          "url": "/coa/design-light-tb-500-0103.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "kpv",
+      "name": "KPV",
+      "tagline": "Alpha-MSH C-terminal tripeptide",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "description": "Tripeptide fragment of alpha-MSH, lyophilized, for in-vitro signaling research.",
+      "priceCents": 5495,
+      "variants": [
+        {
+          "label": "10mg",
+          "sku": "DL-KPV-10",
+          "priceCents": 5495
+        }
+      ],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DL-LOT-0104",
+          "testDate": "2026-06-19",
+          "url": "/coa/design-light-kpv-0104.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "epithalon",
+      "name": "Epithalon",
+      "tagline": "Synthetic tetrapeptide (AEDG)",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "description": "Synthetic tetrapeptide (AEDG), lyophilized, supplied for telomerase research models.",
+      "priceCents": 5795,
+      "variants": [
+        {
+          "label": "10mg",
+          "sku": "DL-EPI-10",
+          "priceCents": 5795
+        }
+      ],
+      "coaDocs": []
+    },
+    {
+      "slug": "semax",
+      "name": "Semax",
+      "tagline": "ACTH(4-7) analog heptapeptide",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "description": "Heptapeptide ACTH(4-7) analog, lyophilized, for neurochemistry research applications.",
+      "priceCents": 7495,
+      "variants": [
+        {
+          "label": "10mg",
+          "sku": "DL-SEM-10",
+          "priceCents": 7495
+        }
+      ],
+      "coaDocs": []
+    },
+    {
+      "slug": "5-amino-1mq",
+      "name": "5-Amino-1MQ",
+      "tagline": "Quinolinium reference compound",
+      "category": "oral",
+      "requiresReconstitution": false,
+      "description": "Capsule presentation of the quinolinium reference compound for formulation and stability research.",
+      "overview": "Supplied in capsule form for laboratories comparing formulation stability. Each bottle carries the same per-lot analytical documentation as vial presentations.",
+      "priceCents": 9995,
+      "variants": [
+        {
+          "label": "60 capsules",
+          "sku": "DL-AMQ-60",
+          "priceCents": 9995
+        }
+      ],
+      "subscription": {
+        "eligible": true,
+        "kind": "Research program",
+        "totalWeeks": 4,
+        "shipmentWeeks": [1]
+      },
+      "coaDocs": []
+    },
+    {
+      "slug": "glutathione-oral",
+      "name": "Glutathione Oral",
+      "tagline": "Tripeptide antioxidant standard",
+      "category": "oral",
+      "requiresReconstitution": false,
+      "description": "Capsule presentation of the glutathione tripeptide reference standard for assay development.",
+      "priceCents": 7995,
+      "variants": [
+        {
+          "label": "60 capsules",
+          "sku": "DL-GLU-60",
+          "priceCents": 7995
+        }
+      ],
+      "coaDocs": []
+    },
+    {
+      "slug": "bacteriostatic-solution",
+      "name": "Reconstitution Solution",
+      "tagline": "Laboratory diluent",
+      "tags": ["supplies"],
+      "requiresReconstitution": false,
+      "description": "Laboratory diluent for bringing lyophilized reference materials into solution for bench work.",
+      "priceCents": 1495,
+      "variants": [
+        {
+          "label": "30mL",
+          "sku": "DL-BAC-30",
+          "priceCents": 1495
+        }
+      ],
+      "coaDocs": []
+    }
+  ]
+}

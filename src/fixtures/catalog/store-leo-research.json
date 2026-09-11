@@ -1,0 +1,280 @@
+{
+  "products": [
+    {
+      "slug": "bpc-157-oral",
+      "name": "BPC-157 Oral",
+      "description": "Body Protective Compound — a 15-amino-acid synthetic peptide originally characterized from gastric juice — supplied as reference-grade tablets. Studied in gut-barrier and tissue-signaling research. Research use only.",
+      "priceCents": 21900,
+      "variants": [
+        { "label": "500mcg × 30 tablets", "sku": "LEO-BPC157-ORAL-30", "priceCents": 21900 }
+      ],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "LEO-DEMO-2601",
+          "testDate": "2026-04-18",
+          "url": "/coa/bpc-157-oral-leo-demo-2601-purity.pdf"
+        },
+        {
+          "label": "Heavy Metals (ICP-MS)",
+          "docType": "heavy-metals",
+          "lotNumber": "LEO-DEMO-2601",
+          "testDate": "2026-04-18",
+          "url": "/coa/bpc-157-oral-leo-demo-2601-hm.pdf"
+        },
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "LEO-DEMO-2602",
+          "testDate": "2026-07-02",
+          "url": "/coa/bpc-157-oral-leo-demo-2602-purity.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "lean",
+      "name": "LEAN",
+      "description": "Dual-incretin research peptide — a GIP/GLP-1 receptor agonist analog. Studied in incretin-pathway and glucose-signaling research. Lyophilized. Research use only.",
+      "priceCents": 29900,
+      "variants": [
+        { "label": "10mg vial", "sku": "LEO-LEAN-10", "priceCents": 29900 },
+        { "label": "3mg × 30 tablets", "sku": "LEO-LEAN-ORAL-30", "priceCents": 39900 }
+      ],
+      "coaDocs": [
+        { "label": "COA — Lot LEO-DEMO-2610 (HPLC + MS)", "url": "/coa/lean-leo-demo-2610.pdf" }
+      ]
+    },
+    {
+      "slug": "lean-burn",
+      "name": "LEAN & BURN",
+      "description": "Tri-agonist research peptide — a GIP/GLP-1/glucagon receptor agonist analog. Studied in multi-receptor incretin research. Lyophilized. Research use only.",
+      "priceCents": 39900,
+      "variants": [{ "label": "12mg vial", "sku": "LEO-LEANBURN-12", "priceCents": 39900 }],
+      "coaDocs": [
+        {
+          "label": "COA — Lot LEO-DEMO-2611 (HPLC + MS)",
+          "url": "/coa/lean-burn-leo-demo-2611.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "lean-oral",
+      "name": "LEAN Oral",
+      "description": "Small-molecule oral GLP-1 receptor agonist research compound, supplied as reference-grade tablets. Studied in nonpeptide incretin-receptor research. Research use only.",
+      "priceCents": 39900,
+      "variants": [{ "label": "3mg × 30 tablets", "sku": "LEO-LEANORAL-30", "priceCents": 39900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "kpv",
+      "name": "KPV",
+      "description": "Tripeptide corresponding to the C-terminal fragment of alpha-MSH. Studied in cytokine-signaling and intestinal-barrier research. Lyophilized. Research use only.",
+      "priceCents": 21000,
+      "variants": [{ "label": "10mg vial", "sku": "LEO-KPV-10", "priceCents": 21000 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "selank",
+      "name": "Selank",
+      "description": "Synthetic analogue of tuftsin. Studied in GABAergic and serotonergic signaling research. Lyophilized. Research use only.",
+      "priceCents": 12400,
+      "variants": [{ "label": "10mg vial", "sku": "LEO-SELANK-10", "priceCents": 12400 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "semax",
+      "name": "Semax",
+      "description": "ACTH(4-10) analog heptapeptide. Studied in melanocortin and BDNF-expression research. Lyophilized. Research use only.",
+      "priceCents": 18000,
+      "variants": [{ "label": "30mg vial", "sku": "LEO-SEMAX-30", "priceCents": 18000 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "mots-c",
+      "name": "MOTS-c",
+      "description": "Mitochondrial-derived peptide. Studied in AMPK and mitochondrial-signaling research. Lyophilized. Research use only.",
+      "priceCents": 13900,
+      "variants": [{ "label": "10mg vial", "sku": "LEO-MOTSC-10", "priceCents": 13900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "thymosin-alpha-1",
+      "name": "Thymosin Alpha-1",
+      "description": "Thymic peptide fragment. Studied in innate-immune signaling research. Lyophilized. Research use only.",
+      "priceCents": 13900,
+      "variants": [{ "label": "10mg vial", "sku": "LEO-TA1-10", "priceCents": 13900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "ghk-cu",
+      "name": "GHK-Cu",
+      "description": "Naturally occurring copper-binding tripeptide. Studied in extracellular-matrix and dermal-biology research. Lyophilized. Research use only.",
+      "priceCents": 12900,
+      "variants": [{ "label": "50mg vial", "sku": "LEO-GHKCU-50", "priceCents": 12900 }],
+      "coaDocs": [
+        { "label": "COA — Lot LEO-DEMO-2604 (HPLC + MS)", "url": "/coa/ghk-cu-leo-demo-2604.pdf" }
+      ]
+    },
+    {
+      "slug": "glow-70",
+      "name": "GLOW 70",
+      "description": "Research blend of GHK-Cu, BPC-157, and TB-500 in a single vial (50mg/10mg/10mg). Studied as a combined matrix-biology reference blend. Lyophilized. Research use only.",
+      "priceCents": 34900,
+      "variants": [{ "label": "50mg/10mg/10mg vial", "sku": "LEO-GLOW70-70", "priceCents": 34900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "nad-plus",
+      "name": "NAD+",
+      "description": "Biofermented nicotinamide adenine dinucleotide — reference-grade coenzyme for cellular-metabolism research. Lyophilized. Research use only.",
+      "priceCents": 39900,
+      "variants": [{ "label": "1000mg vial", "sku": "LEO-NAD-1000", "priceCents": 39900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "tesamorelin",
+      "name": "Tesamorelin",
+      "description": "Stabilized GHRH analog. Studied in growth-hormone-axis signaling research. Lyophilized. Research use only.",
+      "priceCents": 19900,
+      "variants": [{ "label": "10mg vial", "sku": "LEO-TESA-10", "priceCents": 19900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "ipamorelin",
+      "name": "Ipamorelin",
+      "description": "Selective pentapeptide agonist of the ghrelin receptor (GHS-R). Studied in secretagogue-pathway research. Lyophilized. Research use only.",
+      "priceCents": 13900,
+      "variants": [{ "label": "10mg vial", "sku": "LEO-IPA-10", "priceCents": 13900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "cjc-1295-ipamorelin",
+      "name": "CJC-1295 / Ipamorelin",
+      "description": "Research blend of a GHRH analog and a GHS-R agonist in a single vial (5mg/5mg). Studied in combined secretagogue-pathway research. Lyophilized. Research use only.",
+      "priceCents": 13900,
+      "variants": [{ "label": "5mg/5mg vial", "sku": "LEO-CJCIPA-10", "priceCents": 13900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "tesamorelin-ipamorelin",
+      "name": "Tesamorelin / Ipamorelin",
+      "description": "Research blend of a stabilized GHRH analog and a GHS-R agonist (10mg/2mg). Studied in dual growth-hormone-axis research. Lyophilized. Research use only.",
+      "priceCents": 19900,
+      "variants": [{ "label": "10mg/2mg vial", "sku": "LEO-TESAIPA-12", "priceCents": 19900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "epithalon",
+      "name": "Epithalon",
+      "description": "Synthetic tetrapeptide (AEDG). Studied in telomere and circadian-rhythm research. Lyophilized. Research use only.",
+      "priceCents": 14900,
+      "variants": [{ "label": "50mg vial", "sku": "LEO-EPI-50", "priceCents": 14900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "aod-9604",
+      "name": "AOD-9604",
+      "description": "Growth hormone fragment (176-191). Studied in lipid-signaling research. Lyophilized. Research use only.",
+      "priceCents": 19900,
+      "variants": [{ "label": "6mg vial", "sku": "LEO-AOD-6", "priceCents": 19900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "pt-141",
+      "name": "PT-141",
+      "description": "Cyclic melanocortin-receptor agonist peptide. Studied in MC3R/MC4R signaling research. Lyophilized. Research use only.",
+      "priceCents": 13900,
+      "variants": [{ "label": "10mg vial", "sku": "LEO-PT141-10", "priceCents": 13900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "mt-ii",
+      "name": "Melanotan II",
+      "description": "Cyclic heptapeptide analog of alpha-MSH. Studied in melanocortin-receptor and pigmentation-biology research. Lyophilized. Research use only.",
+      "priceCents": 13900,
+      "variants": [{ "label": "10mg vial", "sku": "LEO-MT2-10", "priceCents": 13900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "kisspeptin",
+      "name": "Kisspeptin",
+      "description": "Endogenous signaling peptide. Studied in GnRH-axis and KISS1R signaling research. Lyophilized. Research use only.",
+      "priceCents": 14900,
+      "variants": [{ "label": "10mg vial", "sku": "LEO-KISS-10", "priceCents": 14900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "dsip",
+      "name": "DSIP",
+      "description": "Delta sleep-inducing peptide — an endogenous nonapeptide. Studied in circadian and sleep-architecture research. Lyophilized. Research use only.",
+      "priceCents": 12900,
+      "variants": [{ "label": "5mg vial", "sku": "LEO-DSIP-5", "priceCents": 12900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "bdnf-p21",
+      "name": "BDNF-P21",
+      "description": "BDNF-mimetic peptide. Studied in TrkB-receptor signaling research. Lyophilized. Research use only.",
+      "priceCents": 21000,
+      "variants": [{ "label": "10mg vial", "sku": "LEO-P21-10", "priceCents": 21000 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "ara-290",
+      "name": "ARA-290",
+      "description": "Erythropoietin-derived peptide. Studied in innate-repair-receptor research. Lyophilized. Research use only.",
+      "priceCents": 24800,
+      "variants": [{ "label": "14mg vial", "sku": "LEO-ARA290-14", "priceCents": 24800 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "5-amino-1mq",
+      "name": "5-Amino-1MQ",
+      "description": "NNMT inhibitor supplied as reference-grade tablets. Studied in NAD+ salvage-pathway research. Research use only.",
+      "priceCents": 27500,
+      "variants": [{ "label": "50mg × 60 tablets", "sku": "LEO-5A1MQ-60", "priceCents": 27500 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "mk-677",
+      "name": "MK-677",
+      "description": "Nonpeptide GHS-R agonist supplied as reference-grade tablets. Studied in secretagogue-pathway research. Research use only.",
+      "priceCents": 25900,
+      "variants": [{ "label": "25mg × 60 tablets", "sku": "LEO-MK677-60", "priceCents": 25900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "tesofensine",
+      "name": "Tesofensine",
+      "description": "Triple monoamine-reuptake inhibitor supplied as reference-grade tablets. Studied in dopaminergic and noradrenergic signaling research. Research use only.",
+      "priceCents": 27900,
+      "variants": [{ "label": "500mcg × 30 tablets", "sku": "LEO-TESO-30", "priceCents": 27900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "slu-pp-332",
+      "name": "SLU-PP-332",
+      "description": "Estrogen-related-receptor (ERR) agonist supplied as reference-grade tablets. Studied in oxidative-metabolism research. Research use only.",
+      "priceCents": 21900,
+      "variants": [{ "label": "250mcg × 60 tablets", "sku": "LEO-SLU-60", "priceCents": 21900 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "dihexa",
+      "name": "Dihexa",
+      "description": "Angiotensin IV analog supplied as reference-grade tablets. Studied in HGF/c-Met pathway research. Research use only.",
+      "priceCents": 15200,
+      "variants": [{ "label": "8mg × 30 tablets", "sku": "LEO-DIHEXA-30", "priceCents": 15200 }],
+      "coaDocs": []
+    },
+    {
+      "slug": "bacteriostatic-water",
+      "name": "Bacteriostatic Water",
+      "description": "Sterile water with 0.9% benzyl alcohol, 30mL. Laboratory reconstitution accessory for lyophilized reference materials. Research use only.",
+      "priceCents": 1000,
+      "variants": [{ "label": "30mL", "sku": "LEO-BACWATER-30", "priceCents": 1000 }],
+      "coaDocs": []
+    }
+  ]
+}

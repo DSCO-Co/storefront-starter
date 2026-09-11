@@ -1,0 +1,213 @@
+{
+  "version": 0,
+  "store": {
+    "id": "store-leo-research",
+    "slug": "leo-research",
+    "status": "live"
+  },
+  "brand": {
+    "name": "LEO Research",
+    "legalEntityRef": "legal-entity:leo-research-llc"
+  },
+  "domains": {
+    "primary": "leo.localhost",
+    "aliases": ["www.leo.localhost", "leoresearch.com", "www.leoresearch.com"]
+  },
+  "theme": {
+    "tokens": {
+      "color": {
+        "primary": {
+          "$type": "color",
+          "$value": "#a8340f"
+        },
+        "primaryForeground": {
+          "$type": "color",
+          "$value": "#fff8f1"
+        },
+        "accent": {
+          "$type": "color",
+          "$value": "#f29131"
+        },
+        "accentForeground": {
+          "$type": "color",
+          "$value": "#1a1614"
+        },
+        "background": {
+          "$type": "color",
+          "$value": "#f9f6f1"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "#fbf9f4"
+        },
+        "surfaceMuted": {
+          "$type": "color",
+          "$value": "#f0e9dd"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "#1a1614"
+        },
+        "muted": {
+          "$type": "color",
+          "$value": "#7a7165"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "#e3d9c8"
+        },
+        "borderStrong": {
+          "$type": "color",
+          "$value": "#1a1614"
+        }
+      },
+      "font": {
+        "body": {
+          "$type": "fontFamily",
+          "$value": "var(--font-inter), Inter, system-ui, -apple-system, sans-serif"
+        },
+        "heading": {
+          "$type": "fontFamily",
+          "$value": "var(--font-archivo-black), 'Arial Black', system-ui, sans-serif"
+        },
+        "mono": {
+          "$type": "fontFamily",
+          "$value": "var(--font-jetbrains-mono), 'JetBrains Mono', ui-monospace, monospace"
+        }
+      },
+      "radius": {
+        "card": {
+          "$type": "dimension",
+          "$value": "4px"
+        },
+        "button": {
+          "$type": "dimension",
+          "$value": "2px"
+        },
+        "pill": {
+          "$type": "dimension",
+          "$value": "9999px"
+        }
+      },
+      "shadow": {
+        "card": {
+          "$type": "shadow",
+          "$value": "0 1px 2px rgba(26,22,20,0.08)"
+        },
+        "cardHover": {
+          "$type": "shadow",
+          "$value": "0 16px 32px -16px rgba(26,22,20,0.28), 0 2px 6px -2px rgba(168,52,15,0.18)"
+        }
+      }
+    }
+  },
+  "template": {
+    "id": "base-v1",
+    "sections": [
+      {
+        "type": "header-nav",
+        "props": {
+          "logoText": "LEO RESEARCH",
+          "links": [
+            {
+              "label": "Catalog",
+              "href": "/#catalog"
+            }
+          ]
+        }
+      },
+      {
+        "type": "rich-text",
+        "props": {
+          "body": "Every lot ships with an ISO 17025, lot-specific Certificate of Analysis. USA facilities. Cold-chain shipping. For laboratory research use only."
+        }
+      },
+      {
+        "type": "hero",
+        "props": {
+          "heading": "Engineered for the science of living better. Longer.",
+          "subheading": "LEO Research supplies research-grade peptides and reference compounds with verified purity, transparent sourcing, and a third-party Certificate of Analysis published for every lot. For laboratory research use only — not for human or veterinary use.",
+          "ctaLabel": "Browse the catalog",
+          "ctaHref": "#catalog"
+        }
+      },
+      {
+        "type": "rich-text",
+        "props": {
+          "heading": "Research focus areas",
+          "body": "The catalog is organized by research focus: tissue and musculoskeletal biology, neuroscience, innate-immune signaling, metabolic pathways, and cellular aging.\n\nEach product page states the compound class, vial or tablet quantity, and the analytical documentation for the current lot. Compounds are supplied as lyophilized reference material or reference-grade tablets for in-vitro laboratory study."
+        }
+      },
+      {
+        "type": "product-grid",
+        "props": {
+          "title": "Catalog",
+          "anchor": "catalog"
+        }
+      },
+      {
+        "type": "coa-block",
+        "props": {
+          "title": "Certificates of Analysis",
+          "intro": "Every lot is characterized by an independent ISO 17025 laboratory — identity by mass spectrometry, purity by HPLC, and net peptide content — before release. Certificates are published per lot and stay available for the life of the product. Lot numbers shown in this demo build are sample data."
+        }
+      },
+      {
+        "type": "rich-text",
+        "props": {
+          "heading": "How every lot is verified",
+          "body": "Identity — mass spectrometry confirms the molecular weight of the stated sequence.\n\nPurity — reverse-phase HPLC quantifies purity; catalog peptides are released at ≥99% purity unless the certificate states otherwise.\n\nQuantity — net content is verified against label claim for each fill.\n\nDocumentation — the certificate for the exact lot in your order is downloadable from the product page and the certificates index."
+        }
+      },
+      {
+        "type": "rich-text",
+        "props": {
+          "heading": "Frequently asked questions",
+          "body": "What does research-grade mean? Compounds are manufactured and characterized as laboratory reference materials, with lot-specific analytical documentation, for in-vitro research use only.\n\nWhere do you ship from? Orders ship from USA facilities with cold-chain packaging where the compound requires it.\n\nHow do I find the COA for my lot? Every certificate is linked from its product page by lot number; match the lot printed on your vial or bottle.\n\nCan these products be used on people or animals? No. Nothing in this catalog is a drug, food, or supplement. All products are for laboratory research use only and are not for human or veterinary use."
+        }
+      },
+      {
+        "type": "rich-text",
+        "props": {
+          "heading": "Research use only",
+          "body": "All products sold by LEO Research LLC are supplied strictly for laboratory research use by qualified professionals. Products are not for human or veterinary use, are not dietary supplements, and have not been evaluated by the FDA. By purchasing, you confirm the materials will be used solely for in-vitro research purposes."
+        }
+      },
+      {
+        "type": "legal-footer",
+        "props": {
+          "companyName": "LEO Research LLC",
+          "links": [
+            {
+              "label": "Terms of Service",
+              "href": "/policies/terms"
+            },
+            {
+              "label": "Privacy Policy",
+              "href": "/policies/privacy"
+            },
+            {
+              "label": "Shipping Policy",
+              "href": "/policies/shipping"
+            },
+            {
+              "label": "Refund Policy",
+              "href": "/policies/refunds"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "catalog": {
+    "storeKey": "store-leo-research"
+  },
+  "comms": {
+    "senderDomain": "leoresearch.com"
+  },
+  "refs": {
+    "secretsRef": "secrets://stores/store-leo-research",
+    "pixels": {}
+  },
+  "preview": true
+}

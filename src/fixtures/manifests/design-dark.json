@@ -1,0 +1,235 @@
+{
+  "version": 0,
+  "store": {
+    "id": "design-dark",
+    "slug": "design-dark",
+    "status": "live"
+  },
+  "brand": {
+    "name": "Meridian Research Supply",
+    "legalEntityRef": "legal-entity:demo-design-dark"
+  },
+  "domains": {
+    "primary": "design-dark.localhost",
+    "aliases": ["www.design-dark.localhost"]
+  },
+  "theme": {
+    "tokens": {
+      "color": {
+        "primary": { "$type": "color", "$value": "#f6f8ff" },
+        "primaryForeground": { "$type": "color", "$value": "#0b1022" },
+        "accent": { "$type": "color", "$value": "#5262ff" },
+        "accentForeground": { "$type": "color", "$value": "#f6f8ff" },
+        "accent-2": { "$type": "color", "$value": "#8fa2ff" },
+        "button": { "$type": "color", "$value": "#5262ff" },
+        "buttonForeground": { "$type": "color", "$value": "#f6f8ff" },
+        "background": { "$type": "color", "$value": "#05070d" },
+        "surface": { "$type": "color", "$value": "#0a0f1f" },
+        "surface-1": { "$type": "color", "$value": "#0a0f1f" },
+        "surface-2": { "$type": "color", "$value": "#0e1428" },
+        "surface-3": { "$type": "color", "$value": "#131a33" },
+        "surfaceMuted": { "$type": "color", "$value": "#0e1428" },
+        "surfaceInverse": { "$type": "color", "$value": "#0b1022" },
+        "text": { "$type": "color", "$value": "#f6f8ff" },
+        "ink-1": { "$type": "color", "$value": "#f6f8ff" },
+        "ink-2": { "$type": "color", "$value": "#c7d2ef" },
+        "ink-3": { "$type": "color", "$value": "#8b96c2" },
+        "ink-4": { "$type": "color", "$value": "#6f7aa4" },
+        "muted": { "$type": "color", "$value": "#8b96c2" },
+        "line": { "$type": "color", "$value": "rgba(157, 189, 255, 0.16)" },
+        "lineSoft": { "$type": "color", "$value": "rgba(157, 189, 255, 0.09)" },
+        "border": { "$type": "color", "$value": "rgba(157, 189, 255, 0.16)" },
+        "glow": { "$type": "color", "$value": "rgba(82, 98, 255, 0.28)" },
+        "glowSoft": { "$type": "color", "$value": "rgba(82, 98, 255, 0.14)" },
+        "warm": { "$type": "color", "$value": "#e3c088" }
+      },
+      "font": {
+        "body": {
+          "$type": "fontFamily",
+          "$value": "var(--font-inter), system-ui, -apple-system, 'Segoe UI', sans-serif"
+        },
+        "heading": {
+          "$type": "fontFamily",
+          "$value": "var(--font-space-grotesk), 'Avenir Next', Futura, ui-sans-serif, sans-serif"
+        },
+        "display": {
+          "$type": "fontFamily",
+          "$value": "var(--font-space-grotesk), 'Avenir Next', Futura, ui-sans-serif, sans-serif"
+        },
+        "headingWeight": { "$type": "fontWeight", "$value": 700 }
+      },
+      "radius": {
+        "card": { "$type": "dimension", "$value": "16px" },
+        "button": { "$type": "dimension", "$value": "9999px" },
+        "pill": { "$type": "dimension", "$value": "9999px" },
+        "image": { "$type": "dimension", "$value": "16px" }
+      },
+      "shadow": {
+        "card": {
+          "$type": "shadow",
+          "$value": "0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3)"
+        },
+        "cardHover": {
+          "$type": "shadow",
+          "$value": "0 28px 60px rgba(0, 0, 0, 0.55), 0 10px 44px rgba(82, 98, 255, 0.14)"
+        }
+      },
+      "nav": { "style": { "$value": "glass-pill" } },
+      "hero": { "style": { "$value": "starfield" } }
+    }
+  },
+  "template": {
+    "id": "base-v1",
+    "sections": [
+      {
+        "type": "announcement-bar",
+        "props": {
+          "text": "Demo storefront — sample data only. Lot numbers are fictitious and no orders are fulfilled."
+        }
+      },
+      {
+        "type": "header-nav",
+        "props": {
+          "logoText": "Meridian",
+          "tagline": "Research use only",
+          "links": [
+            { "label": "Catalog", "href": "/#catalog" },
+            { "label": "COAs", "href": "/#coas" },
+            { "label": "About", "href": "/#about" }
+          ]
+        }
+      },
+      {
+        "type": "epic-hero",
+        "props": {
+          "eyebrow": "Independent analytical documentation",
+          "heading": {
+            "lead": "Research-grade compounds,",
+            "emphasis": "characterized lot by lot.",
+            "emphasisStyle": "gradient"
+          },
+          "subheading": "Meridian supplies research-use-only peptides with published certificates of analysis for every batch — third-party tested, documented, and traceable to the lot.",
+          "badges": [
+            "Published COAs — every batch",
+            "Third-party analytical testing",
+            "RUO compliance built-in"
+          ],
+          "primaryCta": { "label": "Browse the catalog ↓", "href": "/#catalog" },
+          "secondaryCta": { "label": "View COAs", "href": "/#coas" },
+          "stats": [
+            { "value": "6", "label": "Compounds" },
+            { "value": "98.7%+", "label": "Purity floor" },
+            { "value": "100%", "label": "Lots published" }
+          ],
+          "backdrop": "starfield",
+          "align": "center"
+        }
+      },
+      {
+        "type": "product-grid",
+        "props": {
+          "eyebrow": "Catalog",
+          "title": "Six compounds. Every lot published.",
+          "meta": "6 SKUs · lyophilized · in-vitro research",
+          "anchor": "catalog",
+          "controls": true
+        }
+      },
+      {
+        "type": "statement",
+        "props": {
+          "text": "If a lot isn't documented, it doesn't ship. Every vial leaves with its chromatogram, its mass spec, and its chain of custody attached.",
+          "reveal": true
+        }
+      },
+      {
+        "type": "trust-badges",
+        "props": {
+          "eyebrow": "Why this store",
+          "title": "Proof travels with the product.",
+          "anchor": "coas",
+          "badges": [
+            {
+              "icon": "flask",
+              "label": "Characterized lot by lot",
+              "sub": "Every batch runs RP-HPLC and ESI-MS at an independent lab before it is listed. The numbers on the product page are that lot's numbers, not a template."
+            },
+            {
+              "icon": "snowflake",
+              "label": "Cold-chain fulfillment",
+              "sub": "Lyophilized vials ship in insulated, temperature-logged packaging, with transit stability data published per compound."
+            },
+            {
+              "icon": "document",
+              "label": "Batch documentation",
+              "sub": "Certificates of analysis and their version history stay attached to the lot. A revised certificate never replaces the prior version on file."
+            }
+          ]
+        }
+      },
+      {
+        "type": "coa-block",
+        "props": {
+          "title": "Certificates of Analysis",
+          "intro": "Every lot ships with third-party analytical documentation. The certificates below are demo placeholders with fictitious lot numbers."
+        }
+      },
+      {
+        "type": "rich-text",
+        "props": {
+          "heading": "About this demo store",
+          "anchor": "about",
+          "body": "This is a design-demo storefront for the multi-tenant renderer — the dark identity of the dual-theme design system.\n\nAll products, prices, lot numbers and documents on this page are sample data. Nothing here is offered for sale."
+        }
+      },
+      {
+        "type": "legal-footer",
+        "props": {
+          "companyName": "Meridian Research Supply (Demo)"
+        }
+      }
+    ]
+  },
+  "catalog": {
+    "storeKey": "design-dark"
+  },
+  "comms": {
+    "senderDomain": "demo.example.invalid"
+  },
+  "refs": {
+    "secretsRef": "secrets://stores/design-dark",
+    "pixels": {}
+  },
+  "preview": true,
+  "support": {
+    "supportEmail": "support@demo.example.invalid"
+  },
+  "behavior": {
+    "vertical": "ruo",
+    "access": { "noindex": true },
+    "seo": { "profile": "lockdown" },
+    "compliance": {
+      "acknowledgmentGate": { "enabled": true, "persistConsentRow": true },
+      "cookieConsent": { "enabled": false }
+    },
+    "wishlist": { "enabled": true },
+    "search": { "enabled": true, "typeahead": true },
+    "catalog": {
+      "coaDisplay": { "enabled": true, "comingSoonCopy": "COA coming soon" }
+    },
+    "shipping": { "freeShippingThresholdCents": 15000 },
+    "subscriptions": {
+      "autoEnrollBundles": false,
+      "enabled": true,
+      "discounts": { "30": 10, "60": 15 }
+    },
+    "upsells": {
+      "enabled": true,
+      "rules": [
+        { "productId": "bpc-157", "companionProductIds": ["tb-500", "ghk-cu"] },
+        { "productId": "lean-blend", "companionProductIds": ["epithalon"] },
+        { "productId": "semax", "companionProductIds": ["epithalon"] }
+      ]
+    }
+  }
+}

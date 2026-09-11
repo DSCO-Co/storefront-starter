@@ -1,0 +1,737 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DSCO — the platform's own face (Arimo/Liberation Sans, SIL OFL 1.1; the
+   license ships beside the files at public/brand/FONT-LICENSE.txt and MUST
+   move with them). Declared globally because @font-face cannot ride a store's
+   customCss (it is dropped inside the scoped nested rule) — stores opt in via
+   theme tokens (`font.heading: "DSCO, …"`), nothing renders it by default. */
+@font-face {
+  font-family: DSCO;
+  src: url("/brand/sans.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: DSCO;
+  src: url("/brand/sans-bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/*
+ * Base surface styling comes ONLY from per-store CSS custom properties
+ * injected by the store layout (src/lib/tokens.ts). The fallbacks below are
+ * deliberately neutral (holding / not-found pages render without a store).
+ *
+ * These rules are intentionally generic — every store benefits from the same
+ * baseline quality of type rendering, spacing, and interaction states. Only
+ * the token VALUES (colors, fonts, radii, shadows) vary per store; nothing
+ * here is Store #0- or Leo-specific.
+ */
+html {
+  text-size-adjust: 100%;
+  font-feature-settings:
+    "kern" 1,
+    "liga" 1,
+    "calt" 1;
+}
+
+body {
+  background-color: var(--color-background, #fafafa);
+  color: var(--color-text, #1a1a1a);
+  font-family: var(--font-body, system-ui, -apple-system, sans-serif);
+  /* Body copy rhythm (LOO-3150): ~1.6 for running text; headings and data
+     rows set their own tighter values. */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a,
+button,
+summary {
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+/* Visible, on-brand focus ring for keyboard users — replaces the invisible
+   default outline the sections previously relied on. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-accent, #1a1a1a);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--color-accent, #1a1a1a);
+  color: var(--color-primary-foreground, #fff);
+}
+
+/* Skip link: hidden off-canvas until keyboard focus, then a fixed pill.
+   Deliberately NOT Tailwind's .sr-only — that clip pattern requires
+   position:absolute, which .fd-btn's position:relative silently overrides.
+   The a.fd-skip-link selector out-specifies .fd-btn (0,1,1 vs 0,1,0) so the
+   fixed positioning survives regardless of rule order, and the unfocused
+   state also drops fd-btn-primary's glow shadow — an off-canvas button's
+   blur otherwise bleeds back into the viewport as a stray violet sliver. */
+a.fd-skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(calc(-100% - 1.25rem));
+}
+a.fd-skip-link:not(:focus-visible) {
+  box-shadow: none;
+}
+a.fd-skip-link:focus-visible {
+  transform: none;
+}
+
+/* Card hover elevation (category/product grid tiles). CSS-only so the
+   render function stays a Server Component — inline onMouseEnter/onMouseLeave
+   handlers are invalid on elements returned from a non-"use client" section. */
+.card-shadow-hover {
+  box-shadow: var(--shadow-card);
+}
+.card-shadow-hover:hover {
+  box-shadow: var(--shadow-card-hover, var(--shadow-card));
+}
+
+/* ── Design-system utilities (LOO-3140) ─────────────────────────────────── */
+
+/* Full-bleed band inside the centered page column: banded sections (hero,
+   by-the-numbers, cta-banner, …) paint edge-to-edge while their content stays
+   in its own max-width container. body overflow-x is clipped so the 100vw
+   trick never leaks a horizontal scrollbar on scrollbar-reserving platforms. */
+body {
+  overflow-x: clip;
+}
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+/* Entrance rise (epic-hero children, staggered inline via animation-delay). */
+@keyframes sf-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.sf-rise {
+  animation: sf-rise 0.7s var(--motion-ease, cubic-bezier(0.22, 0.61, 0.36, 1)) both;
+}
+
+/* Word-reveal (statement/epic-hero manifesto): each word transitions from
+   faint to full ink when the block gains .sf-lit (IntersectionObserver). */
+.sf-word {
+  color: color-mix(in srgb, currentColor 24%, transparent);
+  transition: color 0.5s var(--motion-ease, ease);
+}
+.sf-lit .sf-word {
+  color: currentColor;
+}
+
+/* Vial hover lift (product cards / PDP visual). */
+.sf-vial {
+  transition: transform 0.3s var(--motion-ease, ease);
+}
+a:hover .sf-vial,
+.sf-vial-stage:hover .sf-vial {
+  transform: translateY(-4px);
+}
+
+/* Animated purity bars (PDP chromatogram) — heights are set inline; the
+   .sf-lit parent triggers the rise. */
+.sf-hplc-bar {
+  height: 0%;
+  transition: height 0.7s var(--motion-ease, ease);
+}
+
+/* Slide-in cart drawer. */
+.sf-drawer-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s var(--motion-ease, ease);
+}
+.sf-drawer-open .sf-drawer-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+.sf-drawer-panel {
+  transform: translateX(105%);
+  transition: transform 0.35s var(--motion-ease, ease);
+}
+.sf-drawer-open .sf-drawer-panel {
+  transform: none;
+}
+@keyframes sf-row-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+.sf-row-flash {
+  animation: sf-row-in 0.45s var(--motion-ease, ease);
+}
+@keyframes sf-toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+.sf-toast {
+  animation: sf-toast-in 0.25s var(--motion-ease, ease) both;
+}
+
+/* RUO Pay express-wallet button (LOO-3147). Token-driven: surface + hairline
+   ride the store's vars; the lockup's wordmark ink rides --ruo-pay-ink
+   (derived from background luminance in lib/theme.ts), so ONE button reads
+   correctly on both the dark and light identities. */
+.fd-wallet-express {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-button, 9999px);
+  border: 1px solid var(--color-line, var(--color-border, rgba(0, 0, 0, 0.14)));
+  background-color: var(--color-surface-2, var(--color-surface, transparent));
+  color: var(--color-ink-1, var(--color-text));
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.fd-wallet-express:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px var(--color-glow-soft, transparent);
+}
+.fd-wallet-express:disabled {
+  opacity: 0.5;
+}
+.fd-wallet-express__copy {
+  color: var(--color-ink-2, var(--color-text));
+}
+.fd-wallet-express__card {
+  font-family: var(--font-data);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-3, var(--color-muted));
+}
+
+/* ── Button system (LOO-3150 → LOO-3163) ────────────────────────────────────
+   ONE coherent register across PDP, cart drawer, checkout, account, and
+   cards — all paint from tokens. Compose: `fd-btn` + one VARIANT + one SIZE.
+
+   Variants:
+     .fd-btn-primary      accent fill, glow, hover lift + brightness
+     .fd-btn-secondary    accent-tinted fill (secondary product actions)
+     .fd-btn-soft         alias of secondary (pre-LOO-3163 name)
+     .fd-btn-ghost        hairline border, hover ink-tint fill
+     .fd-btn-destructive  error-tinted; solidifies on hover (cancel/remove)
+
+   Sizes (min-heights keep tap targets honest; sm grows to 44px on touch):
+     .fd-btn-sm  36px · dense in-card actions
+     .fd-btn-md  44px · the default control size
+     .fd-btn-lg  48px · full-width primary CTAs (ATC, Pay, Checkout)
+
+   States: hover/active per variant; :disabled dims; .fd-btn-loading swaps the
+   label for a spinner (callers also set aria-busy). Focus-visible rides the
+   global accent ring. */
+.fd-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-display, var(--font-heading));
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  border-radius: var(--radius-button, 9999px);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.fd-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.fd-btn-sm {
+  min-height: 2.25rem;
+  padding: 0.375rem 1rem;
+  font-size: 0.8125rem;
+}
+.fd-btn-md {
+  min-height: 2.75rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+}
+.fd-btn-lg {
+  min-height: 3rem;
+  padding: 0.625rem 1.75rem;
+  font-size: 0.9375rem;
+}
+/* 44px tap floor on touch devices — even the dense register. */
+@media (pointer: coarse) {
+  .fd-btn-sm {
+    min-height: 2.75rem;
+  }
+}
+/* Loading: label hides, a currentColor spinner takes its place. */
+/* biome-ignore lint/complexity/noImportantStyles: must beat the per-variant color rules (fd-btn-primary etc.) while loading. */
+.fd-btn-loading {
+  pointer-events: none;
+  color: transparent;
+}
+.fd-btn-loading::after {
+  content: "";
+  position: absolute;
+  width: 1.05em;
+  height: 1.05em;
+  border-radius: 9999px;
+  border: 2px solid;
+  border-color: var(--fd-btn-spinner, currentColor);
+  border-top-color: transparent;
+  animation: fd-spin 0.7s linear infinite;
+}
+.fd-btn-primary.fd-btn-loading::after {
+  --fd-btn-spinner: var(
+    --color-button-foreground,
+    var(--color-accent-foreground, var(--color-primary-foreground, #fff))
+  );
+}
+.fd-btn-ghost.fd-btn-loading::after,
+.fd-btn-secondary.fd-btn-loading::after,
+.fd-btn-soft.fd-btn-loading::after {
+  --fd-btn-spinner: var(--color-ink-2, var(--color-text));
+}
+@keyframes fd-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.fd-btn-primary {
+  background-color: var(--color-button, var(--color-accent));
+  color: var(
+    --color-button-foreground,
+    var(--color-accent-foreground, var(--color-primary-foreground, #fff))
+  );
+  box-shadow: 0 10px 30px var(--color-glow, transparent);
+}
+.fd-btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.07);
+  box-shadow: 0 14px 40px var(--color-glow, transparent);
+}
+.fd-btn-primary:active:not(:disabled) {
+  transform: translateY(0) scale(0.98);
+  filter: brightness(0.98);
+}
+.fd-btn-ghost {
+  border-color: var(--color-line, var(--color-border));
+  background-color: transparent;
+  color: var(--color-ink-2, var(--color-text));
+}
+.fd-btn-ghost:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--color-ink-1, var(--color-text)) 7%, transparent);
+  border-color: color-mix(in srgb, var(--color-ink-1, var(--color-text)) 28%, transparent);
+  color: var(--color-ink-1, var(--color-text));
+}
+.fd-btn-ghost:active:not(:disabled) {
+  transform: scale(0.98);
+}
+.fd-btn-secondary,
+.fd-btn-soft {
+  border-color: color-mix(in srgb, var(--color-button, var(--color-accent)) 45%, transparent);
+  background-color: color-mix(in srgb, var(--color-button, var(--color-accent)) 12%, transparent);
+  color: color-mix(
+    in srgb,
+    var(--color-button, var(--color-accent)) 65%,
+    var(--color-ink-1, var(--color-text))
+  );
+}
+.fd-btn-secondary:hover:not(:disabled),
+.fd-btn-soft:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background-color: color-mix(in srgb, var(--color-button, var(--color-accent)) 18%, transparent);
+}
+.fd-btn-secondary:active:not(:disabled),
+.fd-btn-soft:active:not(:disabled) {
+  transform: translateY(0) scale(0.98);
+}
+.fd-btn-destructive {
+  border-color: color-mix(in srgb, var(--color-error, #ef4343) 45%, transparent);
+  background-color: color-mix(in srgb, var(--color-error, #ef4343) 10%, transparent);
+  color: var(--color-error, #ef4343);
+}
+.fd-btn-destructive:hover:not(:disabled) {
+  background-color: var(--color-error, #ef4343);
+  border-color: var(--color-error, #ef4343);
+  color: var(--color-error-foreground, #fff);
+}
+.fd-btn-destructive:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Quantity stepper: ONE segmented control — shared outer border, inner
+   hairline dividers around the count. Never three floating boxes. */
+.fd-stepper {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--color-line, var(--color-border));
+  border-radius: 9999px;
+}
+.fd-stepper button {
+  position: relative;
+  color: var(--color-ink-2, var(--color-text));
+}
+/* 44px tap floor for the − / + regardless of visual density (LOO-3183): the
+   hit box grows OUTWARD only (left for the first control, right for the last,
+   vertically for both), so the two steppers' targets can never overlap across
+   the count in the middle — compact visuals, honest targets, no adjacent
+   mis-taps. min(0px, 100% − 44px) is 0 once the visual box already reaches
+   the floor. */
+.fd-stepper button::before {
+  content: "";
+  position: absolute;
+  top: min(0px, calc(50% - 22px));
+  bottom: min(0px, calc(50% - 22px));
+  left: 0;
+  right: 0;
+}
+.fd-stepper button:first-child::before {
+  left: min(0px, calc(100% - 44px));
+}
+.fd-stepper button:last-child::before {
+  right: min(0px, calc(100% - 44px));
+}
+.fd-stepper button:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--color-ink-1, var(--color-text)) 7%, transparent);
+  color: var(--color-ink-1, var(--color-text));
+}
+.fd-stepper > span {
+  font-family: var(--font-data);
+  text-align: center;
+  color: var(--color-ink-1, var(--color-text));
+  border-left: 1px solid var(--color-line-soft, var(--color-border));
+  border-right: 1px solid var(--color-line-soft, var(--color-border));
+}
+
+/* Form control recipe (checkout fields, coupon entry, account forms, cart
+   qty, search): surface tint + hairline, a soft accent focus ring (replacing
+   the hard outline on text fields), and an aria-invalid error state. All
+   token-driven so the same classes read correctly on dark AND light store
+   identities — never a default white UA box. Compose with spacing utilities
+   (px-3 py-2 etc.); callers own width/density, the recipe owns color. */
+.fd-input,
+.fd-select,
+.fd-textarea {
+  min-height: 2.75rem;
+  border: 1px solid var(--color-line, var(--color-border));
+  border-radius: 10px;
+  background-color: color-mix(
+    in srgb,
+    var(--color-surface-1, var(--color-surface)) 70%,
+    transparent
+  );
+  color: var(--color-text);
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    background-color 150ms ease;
+}
+.fd-input::placeholder,
+.fd-textarea::placeholder {
+  color: var(--color-ink-4, var(--color-muted));
+}
+.fd-input:focus-visible,
+.fd-select:focus-visible,
+.fd-textarea:focus-visible {
+  outline: none;
+  border-color: color-mix(in srgb, var(--color-accent) 70%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+.fd-input[aria-invalid="true"],
+.fd-select[aria-invalid="true"],
+.fd-textarea[aria-invalid="true"] {
+  border-color: color-mix(in srgb, var(--color-error, #ef4343) 70%, transparent);
+}
+.fd-input[aria-invalid="true"]:focus-visible,
+.fd-select[aria-invalid="true"]:focus-visible,
+.fd-textarea[aria-invalid="true"]:focus-visible {
+  border-color: var(--color-error, #ef4343);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-error, #ef4343) 18%, transparent);
+}
+/* Select: replace the UA chrome with a token-inked chevron (two gradient
+   wedges — gradients accept var(), so the mark themes with the store). */
+.fd-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2.25rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--color-ink-3, var(--color-muted)) 50%),
+    linear-gradient(135deg, var(--color-ink-3, var(--color-muted)) 50%, transparent 50%);
+  background-position:
+    calc(100% - 19px) 50%,
+    calc(100% - 14px) 50%;
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+}
+/* The dropdown list itself is OS chrome, but browsers that honor option
+   colors get an opaque surface + readable ink instead of the UA default
+   (the white-on-white failure the dark theme shipped with). */
+.fd-select option {
+  background-color: var(--color-surface-1, var(--color-surface, #fff));
+  color: var(--color-text, #1a1a1a);
+}
+.fd-textarea {
+  resize: vertical;
+}
+/* iOS zooms any focused input under 16px — keep mobile controls at 16px. */
+@media (max-width: 640px) {
+  .fd-input,
+  .fd-select,
+  .fd-textarea {
+    font-size: 16px;
+  }
+}
+/* Inline field error line (rendered under an invalid field). */
+.fd-field-error {
+  margin-top: 0.375rem;
+  font-size: 0.75rem;
+  color: var(--color-error, #ef4343);
+}
+
+/* Checkbox recipe (RUO acknowledgment, subscription consent): brand accent,
+   comfortable tap size, no default-blue 1990s checkbox. */
+.fd-checkbox,
+.fd-radio {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex: none;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+/* Loading skeletons (LOO-3163): content that pops in gets a token-tinted
+   shimmer block instead of a bare "Loading…" string. */
+.fd-skeleton {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: color-mix(in srgb, var(--color-ink-1, var(--color-text)) 8%, transparent);
+}
+.fd-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--color-ink-1, var(--color-text)) 7%, transparent),
+    transparent
+  );
+  animation: fd-shimmer 1.6s var(--motion-ease, ease) infinite;
+}
+@keyframes fd-shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Expanded hit area for visually-small controls (drawer ✕, chip removes):
+   a centered box of at least 44×44px (LOO-3183 — the audit measured the
+   drawer remove ✕ at 8×18) without inflating the visual mark. */
+.fd-hit {
+  position: relative;
+}
+.fd-hit::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: max(100% + 16px, 44px);
+  height: max(100% + 16px, 44px);
+  transform: translate(-50%, -50%);
+}
+
+/* Bottom safe-area padding for fixed bottom surfaces (drawer footer, sticky
+   ATC, floating cart) — notch/home-indicator aware. */
+.fd-safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ⌘K keyboard hint (LOO-3183): a keyboard shortcut is meaningless on touch —
+   show it only on wide, fine-pointer environments. */
+.fd-kbd-hint {
+  display: none;
+}
+@media (min-width: 1024px) and (pointer: fine) {
+  .fd-kbd-hint {
+    display: inline-block;
+  }
+}
+
+/* ── Mobile commerce primitives (LOO-3163) ─────────────────────────────────── */
+
+/* PDP sticky add-to-cart bar: slides up once the primary ATC scrolls off. */
+.fd-sticky-atc {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 40;
+  transform: translateY(110%);
+  transition: transform 0.3s var(--motion-ease, ease);
+  border-top: 1px solid var(--color-line, var(--color-border));
+  background-color: color-mix(
+    in srgb,
+    var(--color-surface-1, var(--color-surface)) 92%,
+    transparent
+  );
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.fd-sticky-atc[data-visible="true"] {
+  transform: none;
+}
+
+/* Floating cart button: appears when the header has scrolled away. */
+.fd-fab-cart {
+  position: fixed;
+  right: 1rem;
+  bottom: calc(1.25rem + env(safe-area-inset-bottom));
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 40%, transparent);
+  background-color: var(--color-button, var(--color-accent));
+  color: var(
+    --color-button-foreground,
+    var(--color-accent-foreground, var(--color-primary-foreground, #fff))
+  );
+  box-shadow: 0 14px 40px var(--color-glow, rgba(0, 0, 0, 0.25));
+  opacity: 0;
+  transform: translateY(10px) scale(0.9);
+  pointer-events: none;
+  transition:
+    opacity 0.25s var(--motion-ease, ease),
+    transform 0.25s var(--motion-ease, ease);
+}
+.fd-fab-cart[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.fd-fab-cart__count {
+  position: absolute;
+  top: -0.3rem;
+  right: -0.3rem;
+  display: grid;
+  place-items: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.3rem;
+  border-radius: 9999px;
+  font-family: var(--font-data);
+  font-size: 10.5px;
+  font-weight: 700;
+  background-color: var(--color-surface-inverse, var(--color-primary));
+  color: var(--color-inverse-text, var(--color-primary-foreground, #fff));
+  border: 1px solid var(--color-line, transparent);
+}
+
+/* Touch ergonomics: steppers and icon buttons grow to the 44px floor on
+   coarse pointers without changing the desktop density. */
+@media (pointer: coarse) {
+  .fd-stepper button {
+    min-height: 2.75rem;
+    min-width: 2.5rem;
+  }
+  .fd-stepper > span {
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* PDP size pills (variant-selector) reach the tap floor too. */
+  [data-variant-register] {
+    min-height: 2.75rem;
+  }
+  /* Header controls (cart bubble, search trigger) reach the 44px floor. */
+  [data-testid="cart-link"] {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+  [data-testid="search-trigger"] {
+    min-height: 2.75rem;
+  }
+}
+
+/* Reduced motion: everything above collapses to its final state. */
+@media (prefers-reduced-motion: reduce) {
+  .sf-rise,
+  .sf-toast,
+  .sf-row-flash {
+    animation-duration: 0.01ms;
+  }
+  .sf-word,
+  .sf-hplc-bar,
+  .sf-drawer-backdrop,
+  .sf-drawer-panel,
+  .sf-vial,
+  .fd-sticky-atc,
+  .fd-fab-cart {
+    transition-duration: 0.01ms;
+  }
+  .fd-skeleton::after {
+    animation: none;
+  }
+  /* The button spinner stays (it communicates state), but calms down. */
+  .fd-btn-loading::after {
+    animation-duration: 1.4s;
+  }
+}

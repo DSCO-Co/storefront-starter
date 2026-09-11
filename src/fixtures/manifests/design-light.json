@@ -1,0 +1,445 @@
+{
+  "version": 0,
+  "store": {
+    "id": "design-light",
+    "slug": "design-light",
+    "status": "live"
+  },
+  "brand": {
+    "name": "Loop Bio Labs (Design Replica)",
+    "legalEntityRef": "legal-entity:demo-design-light"
+  },
+  "domains": {
+    "primary": "design-light.localhost",
+    "aliases": ["www.design-light.localhost"]
+  },
+  "theme": {
+    "tokens": {
+      "color": {
+        "primary": {
+          "$type": "color",
+          "$value": "#162944"
+        },
+        "primaryForeground": {
+          "$type": "color",
+          "$value": "#ffffff"
+        },
+        "accent": {
+          "$type": "color",
+          "$value": "#aa764b"
+        },
+        "accentForeground": {
+          "$type": "color",
+          "$value": "#162944"
+        },
+        "accent-2": {
+          "$type": "color",
+          "$value": "#b8845c"
+        },
+        "button": {
+          "$type": "color",
+          "$value": "#162944"
+        },
+        "buttonForeground": {
+          "$type": "color",
+          "$value": "#ffffff"
+        },
+        "background": {
+          "$type": "color",
+          "$value": "#ffffff"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "#ffffff"
+        },
+        "surfaceMuted": {
+          "$type": "color",
+          "$value": "#f5f5f5"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "#162944"
+        },
+        "muted": {
+          "$type": "color",
+          "$value": "#666666"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "#e6e6e6"
+        },
+        "input": {
+          "$type": "color",
+          "$value": "#f0f0f0"
+        },
+        "ring": {
+          "$type": "color",
+          "$value": "#b8845c"
+        },
+        "glow": {
+          "$type": "color",
+          "$value": "rgba(184, 132, 92, 0.3)"
+        },
+        "glowSoft": {
+          "$type": "color",
+          "$value": "rgba(184, 132, 92, 0.15)"
+        },
+        "success": {
+          "$type": "color",
+          "$value": "#16a249"
+        },
+        "warning": {
+          "$type": "color",
+          "$value": "#f59f0a"
+        },
+        "error": {
+          "$type": "color",
+          "$value": "#ef4343"
+        }
+      },
+      "font": {
+        "body": {
+          "$type": "fontFamily",
+          "$value": "var(--font-inter), Inter, system-ui, -apple-system, sans-serif"
+        },
+        "heading": {
+          "$type": "fontFamily",
+          "$value": "var(--font-playfair), 'Playfair Display', Georgia, 'Times New Roman', serif"
+        },
+        "display": {
+          "$type": "fontFamily",
+          "$value": "var(--font-playfair), 'Playfair Display', Georgia, 'Times New Roman', serif"
+        },
+        "headingWeight": {
+          "$type": "fontWeight",
+          "$value": 400
+        },
+        "mono": {
+          "$type": "fontFamily",
+          "$value": "var(--font-jetbrains-mono), 'JetBrains Mono', ui-monospace, monospace"
+        },
+        "wordmark": {
+          "$type": "fontFamily",
+          "$value": "var(--font-inter), Inter, system-ui, sans-serif"
+        }
+      },
+      "radius": {
+        "base": {
+          "$type": "dimension",
+          "$value": "12px"
+        },
+        "card": {
+          "$type": "dimension",
+          "$value": "16px"
+        },
+        "button": {
+          "$type": "dimension",
+          "$value": "9999px"
+        },
+        "pill": {
+          "$type": "dimension",
+          "$value": "9999px"
+        },
+        "image": {
+          "$type": "dimension",
+          "$value": "24px"
+        }
+      },
+      "shadow": {
+        "card": {
+          "$type": "shadow",
+          "$value": "0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05)"
+        },
+        "cardHover": {
+          "$type": "shadow",
+          "$value": "0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05)"
+        }
+      },
+      "motion": {
+        "durationFast": {
+          "$type": "duration",
+          "$value": "150ms"
+        },
+        "durationNormal": {
+          "$type": "duration",
+          "$value": "300ms"
+        },
+        "durationSlow": {
+          "$type": "duration",
+          "$value": "500ms"
+        }
+      },
+      "wordmark": {
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "0.14em"
+        }
+      }
+    }
+  },
+  "template": {
+    "id": "base-v1",
+    "sections": [
+      {
+        "type": "announcement-bar",
+        "props": {
+          "text": "Demo replica storefront — sample data only. Lot numbers are fictitious and no orders are fulfilled."
+        }
+      },
+      {
+        "type": "header-nav",
+        "props": {
+          "logoText": "LOOP BIO LABS",
+          "links": [
+            {
+              "label": "Shop",
+              "href": "/#catalog"
+            },
+            {
+              "label": "COAs",
+              "href": "/#coas"
+            },
+            {
+              "label": "FAQ",
+              "href": "/#faq"
+            }
+          ]
+        }
+      },
+      {
+        "type": "epic-hero",
+        "props": {
+          "surface": "inverse",
+          "align": "left",
+          "backdrop": "gradient",
+          "eyebrow": "Research-grade peptides, documented lot by lot",
+          "heading": {
+            "lead": "Research peptides,",
+            "emphasis": "verified.",
+            "emphasisStyle": "italic-muted",
+            "stacked": true
+          },
+          "subheading": "Third-party analytical testing, published certificates of analysis, and curated literature for every catalog compound. More COAs publish as new lots are tested.",
+          "primaryCta": {
+            "label": "Browse research peptides →",
+            "href": "/#catalog"
+          },
+          "secondaryCta": {
+            "label": "View COAs",
+            "href": "/#coas"
+          },
+          "stats": [
+            {
+              "value": "9",
+              "label": "Compounds"
+            },
+            {
+              "value": "99%+",
+              "label": "Published lot purity"
+            },
+            {
+              "value": "100%",
+              "label": "Domestic synthesis"
+            }
+          ]
+        }
+      },
+      {
+        "type": "statement",
+        "props": {
+          "eyebrow": "Our standard",
+          "text": "Not just peptides — science.",
+          "sub": "Every research peptide includes curated research papers and literature references, because supplying a compound without context isn't really supporting your research.",
+          "reveal": true
+        }
+      },
+      {
+        "type": "product-grid",
+        "props": {
+          "eyebrow": "Research peptides",
+          "title": "Shop our catalog.",
+          "meta": "independently tested · more COAs coming soon",
+          "anchor": "catalog",
+          "controls": true
+        }
+      },
+      {
+        "type": "trust-badges",
+        "props": {
+          "badges": [
+            {
+              "icon": "flask",
+              "label": "Third-party tested",
+              "sub": "Published COAs per lot"
+            },
+            {
+              "icon": "check",
+              "label": "Quality-controlled",
+              "sub": "U.S. production partners"
+            },
+            {
+              "icon": "package",
+              "label": "Domestic made",
+              "sub": "USA synthesis only"
+            },
+            {
+              "icon": "snowflake",
+              "label": "Cold-chain shipping",
+              "sub": "Insulated and tracked"
+            }
+          ]
+        }
+      },
+      {
+        "type": "by-the-numbers",
+        "props": {
+          "surface": "inverse",
+          "eyebrow": "By the numbers",
+          "stats": [
+            {
+              "value": "9",
+              "label": "Catalog compounds"
+            },
+            {
+              "value": "99.2%",
+              "label": "Avg. published purity"
+            },
+            {
+              "value": "4",
+              "label": "Lots published"
+            },
+            {
+              "value": "100%",
+              "label": "Domestic synthesis"
+            }
+          ],
+          "footnote": "Figures reflect this store's published certificate set."
+        }
+      },
+      {
+        "type": "faq",
+        "props": {
+          "title": "Everything you need to know.",
+          "anchor": "faq",
+          "items": [
+            {
+              "question": "How do I choose a research compound?",
+              "answer": "Browse the catalog by research area, or review each compound's published literature to match it to your program."
+            },
+            {
+              "question": "Are these products FDA-approved?",
+              "answer": "No. These are research-use-only reference materials; they are not drugs and are not for human or veterinary use."
+            },
+            {
+              "question": "How is each lot documented?",
+              "answer": "Each lot ships with third-party analytical documentation. Certificates are linked from every product page and from the COA index; more publish as new lots are tested."
+            },
+            {
+              "question": "How should lyophilized vials be stored?",
+              "answer": "Keep lyophilized material refrigerated, sealed, and protected from light. Certificate documents note lot-specific stability data where available."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta-banner",
+        "props": {
+          "surface": "inverse",
+          "heading": "Ready to start",
+          "headingEmphasis": "your research?",
+          "sub": "Browse the catalog, review the published literature, and check the COAs — it's all there.",
+          "primaryCta": {
+            "label": "Browse the shop",
+            "href": "/#catalog"
+          },
+          "secondaryCta": {
+            "label": "View COAs",
+            "href": "/#coas"
+          },
+          "microcopy": "Create an account at checkout to access order tracking."
+        }
+      },
+      {
+        "type": "coa-block",
+        "props": {
+          "title": "Certificates of Analysis",
+          "anchor": "coas",
+          "intro": "COAs are published as lots are tested. The certificates below are demo placeholders with fictitious lot numbers."
+        }
+      },
+      {
+        "type": "legal-footer",
+        "props": {
+          "companyName": "Loop Bio Labs (Design Replica)"
+        }
+      }
+    ]
+  },
+  "catalog": {
+    "storeKey": "design-light"
+  },
+  "comms": {
+    "senderDomain": "demo.example.invalid"
+  },
+  "refs": {
+    "secretsRef": "secrets://stores/design-light",
+    "pixels": {}
+  },
+  "preview": true,
+  "support": {
+    "supportEmail": "support@demo.example.invalid"
+  },
+  "behavior": {
+    "vertical": "ruo",
+    "access": {
+      "noindex": true
+    },
+    "seo": {
+      "profile": "lockdown"
+    },
+    "compliance": {
+      "acknowledgmentGate": {
+        "enabled": true,
+        "persistConsentRow": true
+      },
+      "cookieConsent": {
+        "enabled": false
+      }
+    },
+    "wishlist": { "enabled": true },
+    "search": {
+      "enabled": true,
+      "typeahead": true
+    },
+    "catalog": {
+      "coaDisplay": {
+        "enabled": true,
+        "comingSoonCopy": "COA coming soon"
+      }
+    },
+    "shipping": {
+      "freeShippingThresholdCents": 20000
+    },
+    "subscriptions": {
+      "autoEnrollBundles": false,
+      "enabled": true,
+      "discounts": { "30": 10, "60": 15 }
+    },
+    "cart": {
+      "companionRules": [
+        {
+          "triggerCategory": "injectable",
+          "companionProductId": "bacteriostatic-solution",
+          "autoAdd": false
+        }
+      ]
+    },
+    "upsells": {
+      "enabled": true,
+      "rules": [
+        { "productId": "bpc-157", "companionProductIds": ["ghk-cu", "kpv"] },
+        { "productId": "5-amino-1mq", "companionProductIds": ["glutathione-oral"] }
+      ]
+    }
+  }
+}

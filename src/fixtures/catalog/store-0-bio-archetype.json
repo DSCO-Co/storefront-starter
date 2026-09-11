@@ -1,0 +1,413 @@
+{
+  "products": [
+    {
+      "slug": "bpc-157",
+      "name": "BPC-157",
+      "tagline": "Pentadecapeptide",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "description": "Synthetic pentadecapeptide — a 15-amino-acid partial sequence of a human gastric protein. Lyophilized powder, ≥99% purity by HPLC. For laboratory research use only; not for human or veterinary use.",
+      "overview": "BPC-157 is one of the most frequently requested reference peptides in the preclinical literature. Each lot is synthesized to order, lyophilized under nitrogen, and released only after third-party analytical review.\n\nSupplied in amber glass vials with crimp seals. Store lyophilized material refrigerated and protected from light.",
+      "mechanism": "In published cell-culture work, BPC-157 has been characterized for its interactions with growth-factor signaling pathways and nitric-oxide-related enzyme systems. All available data are limited to in-vitro and preclinical models.",
+      "priceCents": 5995,
+      "images": [
+        {
+          "assetRef": "asset:store-0-bio-archetype/73d0976f1dfdacefc16fb0cfbc8df497e03e3a65518583315520d0b3cbb99395.png",
+          "alt": "BPC-157 lyophilized vial, demo placeholder render"
+        },
+        {
+          "assetRef": "asset:store-0-bio-archetype/c544d06a1d3a0db4a2b4173ccda5b02c7b1b79e382a8832f4999120157e0ca4d.png",
+          "alt": "BPC-157 10mg lyophilized vial, demo placeholder render",
+          "variantRef": "DEMO-BPC-10"
+        }
+      ],
+      "variants": [
+        { "label": "5mg", "sku": "DEMO-BPC-5", "priceCents": 5995 },
+        { "label": "10mg", "sku": "DEMO-BPC-10", "priceCents": 9995 }
+      ],
+      "pairedWith": [{ "slug": "ghk-cu", "name": "GHK-Cu" }, { "slug": "kpv", "name": "KPV" }],
+      "specs": [
+        { "label": "Format", "value": "Lyophilized powder" },
+        { "label": "Purity (HPLC)", "value": "≥99%" },
+        { "label": "Sequence length", "value": "15 amino acids" }
+      ],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DEMO-LOT-001",
+          "testDate": "2026-05-12",
+          "url": "/coa/bpc-157-demo-lot-001-purity.pdf"
+        },
+        {
+          "label": "Sterility",
+          "docType": "sterility",
+          "lotNumber": "DEMO-LOT-001",
+          "testDate": "2026-05-12",
+          "url": "/coa/bpc-157-demo-lot-001-sterility.pdf"
+        },
+        {
+          "label": "Heavy Metals (ICP-MS)",
+          "docType": "heavy-metals",
+          "lotNumber": "DEMO-LOT-001",
+          "testDate": "2026-05-12",
+          "url": "/coa/bpc-157-demo-lot-001-hm.pdf"
+        },
+        {
+          "label": "Endotoxin (LAL)",
+          "docType": "endotoxin",
+          "lotNumber": "DEMO-LOT-001",
+          "testDate": "2026-05-12",
+          "url": "/coa/bpc-157-demo-lot-001-endotoxin.pdf"
+        },
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DEMO-LOT-001B",
+          "testDate": "2026-07-30",
+          "url": "/coa/bpc-157-demo-lot-001b-purity.pdf"
+        },
+        {
+          "label": "Endotoxin (LAL)",
+          "docType": "endotoxin",
+          "lotNumber": "DEMO-LOT-001B",
+          "testDate": "2026-07-30",
+          "url": "/coa/bpc-157-demo-lot-001b-endotoxin.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "bpc-157-oral",
+      "name": "BPC-157 Oral",
+      "tagline": "Pentadecapeptide — capsule form",
+      "category": "oral",
+      "requiresReconstitution": false,
+      "description": "Capsule presentation of BPC-157 for laboratory stability, dissolution, and formulation research. Research use only.",
+      "overview": "The capsule form is supplied for laboratories comparing formulation stability against the lyophilized reference material. Each bottle carries the same per-lot analytical documentation as the vial presentation.",
+      "mechanism": "Identical peptide sequence to the vial presentation; the capsule matrix is characterized separately on each lot's certificate of analysis.",
+      "priceCents": 8995,
+      "variants": [{ "label": "60 capsules", "sku": "DEMO-BPCO-60", "priceCents": 8995 }],
+      "pairedWith": [{ "slug": "bpc-157", "name": "BPC-157" }],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DEMO-LOT-002",
+          "url": "/coa/bpc-157-oral-demo-lot-002-purity.pdf"
+        },
+        {
+          "label": "Heavy Metals (ICP-MS)",
+          "docType": "heavy-metals",
+          "lotNumber": "DEMO-LOT-002",
+          "url": "/coa/bpc-157-oral-demo-lot-002-hm.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "tb-500",
+      "name": "TB-500",
+      "tagline": "Thymosin Beta-4 Fragment",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "description": "Synthetic fragment of thymosin beta-4 (Tβ4), an actin-binding protein sequence. Lyophilized powder characterized by third-party analytical testing. Research use only.",
+      "overview": "TB-500 corresponds to the actin-binding domain of thymosin beta-4. Lots are released with full chromatographic and mass-spectrometry documentation.",
+      "mechanism": "In cell-based assays, the thymosin beta-4 fragment has been characterized for its role in actin monomer sequestration and cytoskeletal dynamics. Data are limited to in-vitro models.",
+      "priceCents": 6495,
+      "variants": [
+        { "label": "5mg", "sku": "DEMO-TB-5", "priceCents": 6495 },
+        { "label": "10mg", "sku": "DEMO-TB-10", "priceCents": 10995 }
+      ],
+      "pairedWith": [{ "slug": "bpc-157", "name": "BPC-157" }],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DEMO-LOT-003",
+          "url": "/coa/tb-500-demo-lot-003-purity.pdf"
+        },
+        {
+          "label": "Sterility",
+          "docType": "sterility",
+          "lotNumber": "DEMO-LOT-003",
+          "url": "/coa/tb-500-demo-lot-003-sterility.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "selank",
+      "name": "Selank",
+      "tagline": "Heptapeptide",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "description": "Synthetic heptapeptide analog of the tuftsin sequence with a C-terminal extension. Lyophilized powder. Research use only.",
+      "overview": "Selank is a tuftsin-analog heptapeptide referenced widely in preclinical neurochemistry literature. Supplied lyophilized with per-lot analytical documentation.",
+      "mechanism": "Characterized in vitro for enzyme-inhibition activity against enkephalin-degrading peptidases and for receptor-binding profiles in preclinical neurochemistry assays.",
+      "priceCents": 4995,
+      "variants": [
+        { "label": "5mg", "sku": "DEMO-SEL-5", "priceCents": 4995 },
+        { "label": "10mg", "sku": "DEMO-SEL-10", "priceCents": 8995 }
+      ],
+      "pairedWith": [{ "slug": "kpv", "name": "KPV" }],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DEMO-LOT-004",
+          "url": "/coa/selank-demo-lot-004-purity.pdf"
+        },
+        {
+          "label": "Sterility",
+          "docType": "sterility",
+          "lotNumber": "DEMO-LOT-004",
+          "url": "/coa/selank-demo-lot-004-sterility.pdf"
+        },
+        {
+          "label": "Heavy Metals (ICP-MS)",
+          "docType": "heavy-metals",
+          "lotNumber": "DEMO-LOT-004",
+          "url": "/coa/selank-demo-lot-004-hm.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "ghk-cu",
+      "name": "GHK-Cu",
+      "tagline": "Copper Tripeptide",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "description": "Copper tripeptide complex (glycyl-L-histidyl-L-lysine : Cu²⁺). Lyophilized powder with characteristic blue color. Research use only.",
+      "overview": "GHK-Cu is a naturally occurring copper-binding tripeptide studied extensively in cell-culture models. The copper complex gives the lyophilized cake its characteristic blue color — a quick visual identity check on receipt.",
+      "mechanism": "Studied in vitro for copper transport chemistry and for gene-expression profiling in cultured fibroblast lines. All findings are preclinical.",
+      "priceCents": 6995,
+      "images": [
+        {
+          "assetRef": "asset:store-0-bio-archetype/0846a3c19db34080475a29a7ad7060a5bd8f69ac5b84743a9606f49e8c8e7062.png",
+          "alt": "GHK-Cu blue lyophilized vial, demo placeholder render"
+        }
+      ],
+      "variants": [
+        { "label": "50mg", "sku": "DEMO-GHK-50", "priceCents": 6995 },
+        { "label": "100mg", "sku": "DEMO-GHK-100", "priceCents": 11995 }
+      ],
+      "pairedWith": [{ "slug": "bpc-157", "name": "BPC-157" }],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DEMO-LOT-005",
+          "url": "/coa/ghk-cu-demo-lot-005-purity.pdf"
+        },
+        {
+          "label": "Heavy Metals (ICP-MS)",
+          "docType": "heavy-metals",
+          "lotNumber": "DEMO-LOT-005",
+          "url": "/coa/ghk-cu-demo-lot-005-hm.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "kpv",
+      "name": "KPV",
+      "tagline": "Melanocortin Tripeptide",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "description": "C-terminal tripeptide fragment (Lys-Pro-Val) of alpha-MSH. Lyophilized powder. Research use only.",
+      "overview": "KPV is the C-terminal tripeptide of alpha-melanocyte-stimulating hormone, used as a compact reference ligand in melanocortin-pathway research.",
+      "mechanism": "Characterized in vitro for binding at melanocortin-receptor family members and for downstream signaling readouts in cultured cell lines.",
+      "priceCents": 5995,
+      "variants": [{ "label": "10mg", "sku": "DEMO-KPV-10", "priceCents": 5995 }],
+      "pairedWith": [
+        { "slug": "bpc-157", "name": "BPC-157" },
+        { "slug": "selank", "name": "Selank" }
+      ],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DEMO-LOT-006",
+          "url": "/coa/kpv-demo-lot-006-purity.pdf"
+        },
+        {
+          "label": "Sterility",
+          "docType": "sterility",
+          "lotNumber": "DEMO-LOT-006",
+          "url": "/coa/kpv-demo-lot-006-sterility.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "thymosin-alpha-1",
+      "name": "Thymosin Alpha-1",
+      "tagline": "Thymic Peptide",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "description": "28-amino-acid peptide fragment derived from prothymosin alpha. Lyophilized powder. Research use only.",
+      "overview": "Thymosin alpha-1 is a well-characterized thymic peptide fragment with an extensive preclinical literature. Each lot ships with complete analytical documentation.",
+      "mechanism": "Characterized in vitro for toll-like-receptor pathway signaling readouts in cultured cell models. All data are preclinical.",
+      "priceCents": 7995,
+      "variants": [
+        { "label": "5mg", "sku": "DEMO-TA1-5", "priceCents": 7995 },
+        { "label": "10mg", "sku": "DEMO-TA1-10", "priceCents": 13995 }
+      ],
+      "pairedWith": [{ "slug": "mots-c", "name": "MOTS-C" }],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DEMO-LOT-007",
+          "url": "/coa/thymosin-alpha-1-demo-lot-007-purity.pdf"
+        },
+        {
+          "label": "Sterility",
+          "docType": "sterility",
+          "lotNumber": "DEMO-LOT-007",
+          "url": "/coa/thymosin-alpha-1-demo-lot-007-sterility.pdf"
+        },
+        {
+          "label": "Heavy Metals (ICP-MS)",
+          "docType": "heavy-metals",
+          "lotNumber": "DEMO-LOT-007",
+          "url": "/coa/thymosin-alpha-1-demo-lot-007-hm.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "mots-c",
+      "name": "MOTS-C",
+      "tagline": "Mitochondrial Peptide",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "description": "16-amino-acid mitochondrial-derived peptide encoded within the 12S rRNA region of mitochondrial DNA. Lyophilized powder. Research use only.",
+      "overview": "MOTS-C is a mitochondrial-derived peptide of interest in cell-signaling research. Supplied lyophilized with per-lot chromatographic documentation.",
+      "mechanism": "Characterized in cultured cell models for AMPK-pathway signaling readouts and nuclear translocation under stress conditions in vitro.",
+      "priceCents": 8995,
+      "variants": [{ "label": "10mg", "sku": "DEMO-MOTS-10", "priceCents": 8995 }],
+      "pairedWith": [{ "slug": "thymosin-alpha-1", "name": "Thymosin Alpha-1" }],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DEMO-LOT-008",
+          "url": "/coa/mots-c-demo-lot-008-purity.pdf"
+        },
+        {
+          "label": "Sterility",
+          "docType": "sterility",
+          "lotNumber": "DEMO-LOT-008",
+          "url": "/coa/mots-c-demo-lot-008-sterility.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "5-amino-1mq",
+      "name": "5-Amino-1MQ",
+      "tagline": "NNMT Inhibitor",
+      "category": "oral",
+      "requiresReconstitution": false,
+      "description": "Small-molecule inhibitor of nicotinamide N-methyltransferase (NNMT), supplied in capsule form for laboratory enzymology research. Research use only.",
+      "overview": "5-Amino-1MQ is a membrane-permeable small molecule used as a reference NNMT inhibitor in enzymology work. Capsule presentation with per-lot analytical documentation.",
+      "mechanism": "Characterized in vitro as a selective inhibitor of NNMT enzymatic activity, with published kinetic data in cell-free and cell-culture systems.",
+      "priceCents": 9995,
+      "variants": [{ "label": "50mg × 60 capsules", "sku": "DEMO-AMQ-60", "priceCents": 9995 }],
+      "pairedWith": [{ "slug": "nad-plus", "name": "NAD+" }],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DEMO-LOT-009",
+          "url": "/coa/5-amino-1mq-demo-lot-009-purity.pdf"
+        },
+        {
+          "label": "Heavy Metals (ICP-MS)",
+          "docType": "heavy-metals",
+          "lotNumber": "DEMO-LOT-009",
+          "url": "/coa/5-amino-1mq-demo-lot-009-hm.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "lean",
+      "name": "LEAN Blend",
+      "tagline": "Multi-Compound Research Blend",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "gridVariantCards": true,
+      "description": "Multi-compound research blend, lyophilized, supplied for in-vitro assay development. Research use only.",
+      "overview": "LEAN is a fixed-ratio blend of research peptides supplied as a single lyophilized cake for laboratories running multi-analyte assay panels.\n\nThe 10mg and 30mg presentations share this product page — use the size selector to switch between them.",
+      "mechanism": "Each constituent peptide is identified and quantified individually on the lot's certificate of analysis; the blend itself is characterized by combined chromatographic profile.",
+      "priceCents": 29900,
+      "variants": [
+        { "label": "10mg", "sku": "DEMO-LEAN-10", "priceCents": 29900 },
+        { "label": "30mg", "sku": "DEMO-LEAN-30", "priceCents": 62900 }
+      ],
+      "pairedWith": [{ "slug": "mots-c", "name": "MOTS-C" }],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + MS)",
+          "docType": "purity",
+          "lotNumber": "DEMO-LOT-010",
+          "testDate": "2026-06-04",
+          "url": "/coa/lean-demo-lot-010-purity.pdf"
+        },
+        {
+          "label": "Sterility",
+          "docType": "sterility",
+          "lotNumber": "DEMO-LOT-010",
+          "testDate": "2026-06-04",
+          "url": "/coa/lean-demo-lot-010-sterility.pdf"
+        },
+        {
+          "label": "Heavy Metals (ICP-MS)",
+          "docType": "heavy-metals",
+          "lotNumber": "DEMO-LOT-010",
+          "testDate": "2026-06-04",
+          "url": "/coa/lean-demo-lot-010-hm.pdf"
+        },
+        {
+          "label": "Endotoxin (LAL)",
+          "docType": "endotoxin",
+          "lotNumber": "DEMO-LOT-010",
+          "testDate": "2026-06-04",
+          "url": "/coa/lean-demo-lot-010-endotoxin.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "nad-plus",
+      "name": "NAD+",
+      "tagline": "Coenzyme",
+      "category": "injectable",
+      "requiresReconstitution": true,
+      "gridVariantCards": true,
+      "description": "Nicotinamide adenine dinucleotide (NAD+), a coenzyme central to cellular redox chemistry. Lyophilized powder. Research use only.",
+      "overview": "NAD+ is a ubiquitous redox coenzyme supplied here as a high-purity lyophilized reference material. Single vials and 4-packs share this product page — use the size selector.",
+      "mechanism": "NAD+ participates in hydride-transfer reactions across hundreds of characterized enzyme systems; lot documentation reports spectrophotometric identity and purity.",
+      "priceCents": 39900,
+      "variants": [
+        { "label": "1 Vial", "sku": "DEMO-NAD-1", "priceCents": 39900 },
+        { "label": "4-Pack", "sku": "DEMO-NAD-4", "priceCents": 119600 }
+      ],
+      "pairedWith": [{ "slug": "5-amino-1mq", "name": "5-Amino-1MQ" }],
+      "coaDocs": [
+        {
+          "label": "Purity (HPLC + UV)",
+          "docType": "purity",
+          "lotNumber": "DEMO-LOT-011",
+          "url": "/coa/nad-plus-demo-lot-011-purity.pdf"
+        },
+        {
+          "label": "Sterility",
+          "docType": "sterility",
+          "lotNumber": "DEMO-LOT-011",
+          "url": "/coa/nad-plus-demo-lot-011-sterility.pdf"
+        },
+        {
+          "label": "Heavy Metals (ICP-MS)",
+          "docType": "heavy-metals",
+          "lotNumber": "DEMO-LOT-011",
+          "url": "/coa/nad-plus-demo-lot-011-hm.pdf"
+        }
+      ]
+    }
+  ]
+}

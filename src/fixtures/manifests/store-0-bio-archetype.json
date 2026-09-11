@@ -1,0 +1,338 @@
+{
+  "version": 0,
+  "store": {
+    "id": "store-0-bio-archetype",
+    "slug": "bio-archetype",
+    "status": "live"
+  },
+  "brand": {
+    "name": "Loop Bio Labs (Demo)",
+    "legalEntityRef": "legal-entity:demo-archetype",
+    "assets": {
+      "logoRef": "asset:store-0-bio-archetype/a4dd5a62015871400d334e07b7c282cfdcc527f928a59caceab02424edec5440.svg",
+      "faviconRef": "asset:store-0-bio-archetype/dbd52aef6447605c18b8ee2a3f5828e28e85f75947a2c5ed1f6ed3b67f85efdb.png",
+      "ogImageRef": "asset:store-0-bio-archetype/b37c4f81ae60d04a12b781d2c16584a22a682275e301719d4f1942cce61ac728.png"
+    }
+  },
+  "domains": {
+    "primary": "bio-archetype.localhost",
+    "aliases": ["www.bio-archetype.localhost", "bio.localhost", "localhost", "127.0.0.1"]
+  },
+  "theme": {
+    "tokens": {
+      "color": {
+        "primary": {
+          "$type": "color",
+          "$value": "#162944"
+        },
+        "primaryForeground": {
+          "$type": "color",
+          "$value": "#ffffff"
+        },
+        "accent": {
+          "$type": "color",
+          "$value": "#b8845c"
+        },
+        "accentForeground": {
+          "$type": "color",
+          "$value": "#162944"
+        },
+        "background": {
+          "$type": "color",
+          "$value": "#faf8f4"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "#ffffff"
+        },
+        "surfaceMuted": {
+          "$type": "color",
+          "$value": "#f2ede3"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "#16202c"
+        },
+        "muted": {
+          "$type": "color",
+          "$value": "#5c6570"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "#e4ddce"
+        },
+        "borderStrong": {
+          "$type": "color",
+          "$value": "#c9bea3"
+        }
+      },
+      "font": {
+        "body": {
+          "$type": "fontFamily",
+          "$value": "var(--font-inter), system-ui, -apple-system, 'Segoe UI', sans-serif"
+        },
+        "heading": {
+          "$type": "fontFamily",
+          "$value": "var(--font-fraunces), Georgia, 'Times New Roman', serif"
+        }
+      },
+      "radius": {
+        "card": {
+          "$type": "dimension",
+          "$value": "20px"
+        },
+        "button": {
+          "$type": "dimension",
+          "$value": "8px"
+        },
+        "pill": {
+          "$type": "dimension",
+          "$value": "9999px"
+        }
+      },
+      "shadow": {
+        "card": {
+          "$type": "shadow",
+          "$value": "0 1px 3px rgba(22,41,68,0.06), 0 1px 2px rgba(22,41,68,0.05)"
+        },
+        "cardHover": {
+          "$type": "shadow",
+          "$value": "0 24px 48px -20px rgba(22,41,68,0.22), 0 4px 10px -4px rgba(22,41,68,0.08)"
+        }
+      }
+    }
+  },
+  "template": {
+    "id": "base-v1",
+    "sections": [
+      {
+        "type": "announcement-bar",
+        "props": {
+          "text": "Demo storefront \u2014 sample data only. Lot numbers are fictitious and no orders are fulfilled."
+        }
+      },
+      {
+        "type": "header-nav",
+        "props": {
+          "logoText": "LOOP BIO LABS",
+          "links": [
+            {
+              "label": "Shop",
+              "href": "/#catalog"
+            },
+            {
+              "label": "Science",
+              "href": "/#science"
+            },
+            {
+              "label": "COAs",
+              "href": "/#coas"
+            },
+            {
+              "label": "FAQ",
+              "href": "/#faq"
+            },
+            {
+              "label": "About",
+              "href": "/#about"
+            }
+          ]
+        }
+      },
+      {
+        "type": "hero",
+        "props": {
+          "heading": "Research-grade compounds, characterized lot by lot.",
+          "subheading": "Loop Bio Labs (Demo) supplies research-use-only peptides and reference materials with published certificates of analysis for every batch.",
+          "ctaLabel": "Browse the catalog",
+          "ctaHref": "#catalog"
+        }
+      },
+      {
+        "type": "category-grid",
+        "props": {
+          "title": "Browse by category",
+          "categories": [
+            {
+              "category": "injectable",
+              "title": "Lyophilized vials",
+              "blurb": "Peptides and coenzymes supplied as lyophilized powder. Reconstitution solution is required for laboratory preparation."
+            },
+            {
+              "category": "oral",
+              "title": "Capsule presentations",
+              "blurb": "Capsule-form reference materials for formulation and stability research. No reconstitution required."
+            }
+          ]
+        }
+      },
+      {
+        "type": "product-grid",
+        "props": {
+          "title": "Catalog",
+          "anchor": "catalog"
+        }
+      },
+      {
+        "type": "science-block",
+        "props": {
+          "title": "The science, in vitro",
+          "anchor": "science",
+          "intro": "Every compound we supply is characterized against the published preclinical literature. Summaries below describe laboratory findings only \u2014 none of this is medical advice, and none of these materials are for human use."
+        }
+      },
+      {
+        "type": "coa-block",
+        "props": {
+          "title": "Certificates of Analysis",
+          "anchor": "coas",
+          "intro": "Every lot ships with third-party analytical documentation: purity by HPLC + MS, and where applicable sterility and heavy-metals panels. The certificates below are demo placeholders with fictitious lot numbers."
+        }
+      },
+      {
+        "type": "faq",
+        "props": {
+          "title": "Frequently asked questions",
+          "anchor": "faq",
+          "items": [
+            {
+              "question": "What does \"research use only\" mean?",
+              "answer": "Everything sold here is supplied solely for laboratory research by qualified professionals. These materials are not for human or veterinary use, and we do not provide guidance on any other use."
+            },
+            {
+              "question": "How is each lot documented?",
+              "answer": "Each lot ships with a purity certificate (HPLC + MS) and, where applicable, sterility and heavy-metals panels from a third-party laboratory. Certificates are linked from every product page and from the COA index."
+            },
+            {
+              "question": "How should lyophilized vials be stored?",
+              "answer": "Keep lyophilized material refrigerated, sealed, and protected from light. Certificate documents note lot-specific stability data where available."
+            },
+            {
+              "question": "What is reconstitution solution?",
+              "answer": "A laboratory diluent used to bring lyophilized powder into solution for bench work. Products that require it are marked on their product pages; capsule presentations do not."
+            },
+            {
+              "question": "Do you provide preparation protocols?",
+              "answer": "No. We supply reference materials and their analytical documentation. Experimental design and preparation are the responsibility of the receiving laboratory."
+            },
+            {
+              "question": "Is this a real store?",
+              "answer": "No \u2014 this is Store #0, the demo storefront for the multi-tenant renderer. Payments run against a public sandbox gateway and no orders are ever fulfilled."
+            }
+          ]
+        }
+      },
+      {
+        "type": "rich-text",
+        "props": {
+          "heading": "About this demo store",
+          "anchor": "about",
+          "body": "This is Store #0 \u2014 the Loop Bio archetype demo storefront used to exercise the multi-tenant renderer.\n\nAll products, prices, lot numbers and documents on this page are sample data. Checkout runs against a public payment sandbox. Nothing here is offered for sale."
+        }
+      },
+      {
+        "type": "policy-page",
+        "props": {
+          "slug": "shipping",
+          "title": "Shipping Policy",
+          "body": "Orders ship in insulated packaging from our fulfillment facility within two business days of payment.\n\nLyophilized materials are stable at ambient temperature in transit; refrigerate on receipt. A tracking link is emailed when the carrier collects the parcel.\n\nThis is a demo store: no orders are actually fulfilled and no parcels ship."
+        }
+      },
+      {
+        "type": "policy-page",
+        "props": {
+          "slug": "returns",
+          "title": "Returns Policy",
+          "body": "Because our products are laboratory reference materials, opened vials and bottles cannot be returned.\n\nIf a shipment arrives damaged or an analytical certificate does not match the labeled lot, contact us within 14 days of delivery and we will replace the lot or refund the order.\n\nThis is a demo store: no orders are actually fulfilled."
+        }
+      },
+      {
+        "type": "policy-page",
+        "props": {
+          "slug": "terms",
+          "title": "Terms of Service",
+          "body": "All products sold on this site are supplied for laboratory research use only. By ordering, the purchaser certifies that they are a qualified professional acquiring these materials for research purposes, and that the materials will not be used on humans or animals.\n\nWe reserve the right to refuse or cancel any order. Title transfers on delivery; risk of loss transfers to the carrier at dispatch.\n\nThis is a demo store operated with sample data; these terms are placeholders and create no obligations."
+        }
+      },
+      {
+        "type": "policy-page",
+        "props": {
+          "slug": "privacy",
+          "title": "Privacy Policy",
+          "body": "We collect only the information needed to process orders: contact details, shipping address, and payment authorization results. Card numbers pass directly to the payment gateway and are never stored on our systems.\n\nWe do not sell or share customer information with third parties except as required to fulfill an order.\n\nThis is a demo store operated with sample data; no real customer data is collected."
+        }
+      },
+      {
+        "type": "legal-footer",
+        "props": {
+          "companyName": "Loop Bio Labs (Demo)",
+          "links": [
+            {
+              "label": "Shipping Policy",
+              "href": "/policies/shipping"
+            },
+            {
+              "label": "Returns Policy",
+              "href": "/policies/returns"
+            },
+            {
+              "label": "Terms of Service",
+              "href": "/policies/terms"
+            },
+            {
+              "label": "Privacy Policy",
+              "href": "/policies/privacy"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "catalog": {
+    "storeKey": "store-0-bio-archetype"
+  },
+  "comms": {
+    "senderDomain": "demo.example.invalid"
+  },
+  "refs": {
+    "secretsRef": "secrets://stores/store-0-bio-archetype",
+    "pixels": {}
+  },
+  "preview": true,
+  "support": {
+    "supportEmail": "support@demo.example.invalid"
+  },
+  "behavior": {
+    "vertical": "ruo",
+    "wishlist": { "enabled": true },
+    "access": {
+      "noindex": true
+    },
+    "seo": {
+      "profile": "lockdown"
+    },
+    "gating": {
+      "funnelGuard": {
+        "enabled": false
+      }
+    },
+    "compliance": {
+      "acknowledgmentGate": {
+        "enabled": true,
+        "persistConsentRow": true
+      },
+      "cookieConsent": {
+        "enabled": true,
+        "regions": "all"
+      },
+      "ageGate": {
+        "enabled": false,
+        "minAge": 21,
+        "mode": "interstitial"
+      }
+    },
+    "subscriptions": {
+      "autoEnrollBundles": false
+    }
+  }
+}
