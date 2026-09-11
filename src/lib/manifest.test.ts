@@ -18,7 +18,7 @@ describe("manifest v0 schema", () => {
       futureField: { anything: true },
       brand: { ...bioArchetype.brand, futureBrandField: "x" },
     });
-    expect(parsed.brand.name).toBe("Loop Bio Labs (Demo)");
+    expect(parsed.brand.name).toBe("Helix Bio Labs (Demo)");
   });
 
   it("rejects a manifest with the wrong version", () => {

@@ -6,7 +6,7 @@
     "status": "live"
   },
   "brand": {
-    "name": "Loop Bio Labs (Design Replica)",
+    "name": "Helix Bio Labs (Design Replica)",
     "legalEntityRef": "legal-entity:demo-design-light"
   },
   "domains": {
@@ -370,7 +370,7 @@
       {
         "type": "legal-footer",
         "props": {
-          "companyName": "Loop Bio Labs (Design Replica)"
+          "companyName": "Helix Bio Labs (Design Replica)"
         }
       }
     ]

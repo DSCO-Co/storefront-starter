@@ -81,7 +81,7 @@ describe("legal-footer section", () => {
     const linked = render(
       renderSection(linkedSection, {
         storeKey: "store-0-bio-archetype",
-        brandName: "Loop Bio",
+        brandName: "Helix Bio",
         products: [],
         hasPrivacyPolicy: true,
       }),

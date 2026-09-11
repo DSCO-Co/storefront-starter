@@ -6,7 +6,7 @@
     "status": "live"
   },
   "brand": {
-    "name": "Loop Bio Labs (Demo)",
+    "name": "Helix Bio Labs (Demo)",
     "legalEntityRef": "legal-entity:demo-archetype",
     "assets": {
       "logoRef": "asset:store-0-bio-archetype/a4dd5a62015871400d334e07b7c282cfdcc527f928a59caceab02424edec5440.svg",
@@ -143,7 +143,7 @@
         "type": "hero",
         "props": {
           "heading": "Research-grade compounds, characterized lot by lot.",
-          "subheading": "Loop Bio Labs (Demo) supplies research-use-only peptides and reference materials with published certificates of analysis for every batch.",
+          "subheading": "Helix Bio Labs (Demo) supplies research-use-only peptides and reference materials with published certificates of analysis for every batch.",
           "ctaLabel": "Browse the catalog",
           "ctaHref": "#catalog"
         }
@@ -227,7 +227,7 @@
         "props": {
           "heading": "About this demo store",
           "anchor": "about",
-          "body": "This is Store #0 \u2014 the Loop Bio archetype demo storefront used to exercise the multi-tenant renderer.\n\nAll products, prices, lot numbers and documents on this page are sample data. Checkout runs against a public payment sandbox. Nothing here is offered for sale."
+          "body": "This is Store #0 \u2014 the Helix Bio archetype demo storefront used to exercise the multi-tenant renderer.\n\nAll products, prices, lot numbers and documents on this page are sample data. Checkout runs against a public payment sandbox. Nothing here is offered for sale."
         }
       },
       {
@@ -265,7 +265,7 @@
       {
         "type": "legal-footer",
         "props": {
-          "companyName": "Loop Bio Labs (Demo)",
+          "companyName": "Helix Bio Labs (Demo)",
           "links": [
             {
               "label": "Shipping Policy",

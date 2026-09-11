@@ -19,7 +19,7 @@ import { getRequestManifest } from "@/lib/request-manifest";
  * POSTs its proofs; this route scores them through the persons CDP (the
  * scoring authority), and on a pass mints the session + admit cookies
  * server-side. A returning visitor with a valid admit cookie is re-admitted
- * WITHOUT re-scoring (the durable-admit feature loopbio minted but never
+ * WITHOUT re-scoring (a durable-admit feature a prior deployment minted but never
  * read). If the CDP reports the circuit breaker suspended, everyone is
  * admitted — a mis-tuned gate must degrade to open.
  *

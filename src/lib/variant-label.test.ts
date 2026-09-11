@@ -27,7 +27,7 @@ describe("composeVariantLabel", () => {
   });
 
   it("derives the human remainder from a slug-shaped ref (the audit's exact case)", () => {
-    // Live loopbio: no stored label; the variant_ref embeds the product slug.
+    // Live-store shape: no stored label; the variant_ref embeds the product slug.
     expect(
       composeVariantLabel({
         label: null,

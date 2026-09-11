@@ -549,9 +549,9 @@ export type StoreManifest = z.infer<typeof storeManifestSchema>;
 export type SeoMode = "open" | "locked";
 
 /**
- * Stores that are ALWAYS noindex regardless of manifest flags. Store #0 (the
- * Loop Bio archetype demo) must never be indexable while the real
- * loopbiolabs.com storefront is running — see apps/storefront/CLAUDE.md.
+ * Stores that are ALWAYS noindex regardless of manifest flags. The archetype
+ * demo store must never be indexable while a real client storefront serves
+ * the same brand — a duplicate-content and brand-confusion hazard.
  */
 export const ALWAYS_NOINDEX_STORE_KEYS: readonly string[] = ["store-0-bio-archetype"];
 

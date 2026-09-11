@@ -12,7 +12,7 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
  * Minimum milliseconds between form mount and submit before we believe a
- * human filled it (the loopbio-v2 welcome-signup bot heuristic the
+ * human filled it (the predecessor platform welcome-signup bot heuristic the
  * email-capture form was modeled on). Deliberately LOW — autofill users are
  * real users; only an instant submit is treated as a bot.
  */
